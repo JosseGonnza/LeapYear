@@ -16,4 +16,16 @@ class LeapYearTest {
         LeapYear leapYear = new LeapYear();
         Assertions.assertThat(leapYear.isLeapYear(1996)).isEqualTo(true);
     }
+
+    @Test
+    public void is_a_leap_year_if_it_is_divisible_by_400() {
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertThat(leapYear.isLeapYear(1600)).isEqualTo(true);
+    }
+
+    @Test
+    public void is_not_a_leap_year_if_it_is_divisible_by_100_but_yes_if_it_is_divisible_by_400() {
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertThat(leapYear.isLeapYear(1800)).isEqualTo(false);
+    }
 }
