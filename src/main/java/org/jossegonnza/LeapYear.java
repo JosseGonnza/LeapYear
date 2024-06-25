@@ -3,6 +3,6 @@ package org.jossegonnza;
 public class LeapYear {
 
     public boolean isLeapYear(int year) {
-        return true;
+        return year % 4 == 0;
     }
 }

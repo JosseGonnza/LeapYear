@@ -10,4 +10,10 @@ class LeapYearTest {
         LeapYear leapYear = new LeapYear();
         Assertions.assertThat(leapYear.isLeapYear(1997)).isEqualTo(false);
     }
+
+    @Test
+    public void is_a_leap_year_if_it_is_divisible_by_4() {
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertThat(leapYear.isLeapYear(1996)).isEqualTo(true);
+    }
 }
