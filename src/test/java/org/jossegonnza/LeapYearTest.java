@@ -10,7 +10,7 @@ class LeapYearTest {
     @Test
     public void should_return_true_if_divisible_by_4() {
 
-        Assertions.assertThat(4).isEqualTo("true");
+        Assertions.assertThat(leapYear.isLeapYear(4)).isEqualTo(true);
     }
 
 }
